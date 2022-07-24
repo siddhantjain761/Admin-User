@@ -1,0 +1,144 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Login Template</title>
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+ <!--  <link rel="stylesheet" href="assets/css/login.css"> -->
+  <link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"><!----pop up font style link---->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@200&family=Reggae+One&display=swap" rel="stylesheet"><!----pop up font style link end---->
+</head>
+
+<body style="background-color: #8fc4b7">
+  <section    >
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-lg-8 col-xl-6">
+          <div class="card rounded-3">
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img3.webp"
+              class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;"
+              alt="Sample photo">
+            <div class="card-body p-4 p-md-5">
+              <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">USER Registration Form</h3>
+
+              <form class="login" [formGroup]="registerForm" (ngSubmit)="submit()">
+
+                <label for="firstname">FIRSTNAME</label>
+                <input class="form-control " type="text" id="firstname" name="firstname" placeholder="Enter your firstname" [(ngModel)]="createuser.firstname" formControlName="Firstname" required/>
+                <br/>
+                <div class="error" *ngIf="registerForm.controls['Firstname'].dirty">
+                    <p *ngIf="registerForm.controls['Firstname'].errors?.['required'] " class="alert alert-danger">
+                        This Field is Required
+                    </p>
+                </div>
+
+
+                <label for="lastname">LASTNAME</label>
+                <input class="form-control " type="text" id="lastname" name="lastname"   placeholder="Enter your lastname" [(ngModel)]="createuser.lastname" formControlName="Lastname" required/>
+                <br/>
+                <div class="error" *ngIf="registerForm.controls['Lastname'].dirty">
+                    <p *ngIf="registerForm.controls['Lastname'].errors?.['required']" class="alert alert-danger">
+                        This Field is Required
+                    </p>
+                </div>
+
+
+                <label for="emailid">EMAIL ID</label>
+                <input class="form-control " type="text" required id="emailid" name="emailid"   placeholder="Enter your emailid" [(ngModel)]="createuser.emailid" formControlName="Emailid" />
+                <br/>
+                <div class="error" *ngIf="registerForm.controls['Emailid'].dirty">
+                    <p *ngIf="registerForm.controls['Emailid'].errors?.['required']" class="alert alert-danger">
+                        This Field is Required
+                    </p>
+                </div>
+
+                <label for="mobilenumber">MOBILE NUMBER</label>
+                <input class="form-control " type="text" required id="mobilenumber" name="mobilenumber"   placeholder="Enter your mobilenumber" [(ngModel)]="createuser.mobilenumber" formControlName="Mobilenumber" />
+                <br/>
+                <div class="error" *ngIf="registerForm.controls['Mobilenumber'].dirty">
+                    <p *ngIf="registerForm.controls['Mobilenumber'].errors?.['required']" class="alert alert-danger">
+                        This Field is Required
+                    </p>
+                </div>
+
+
+                <label for="password">PASSWORD</label>
+                <input class="form-control " type="password" required id="password" name="password" placeholder="***********" [(ngModel)]="createuser.password"   formControlName="Password" />
+                <br/>
+                <div class="error" *ngIf="registerForm.controls['Password'].dirty">
+                    <p *ngIf="registerForm.controls['Password'].errors?.['required']" class="alert alert-danger">
+                        This Field is Required
+                    </p>
+                </div>
+
+
+
+                <label for="nationality">Nationality</label>
+                <input class="form-control " type="text" required id="nationality" name="nationality" placeholder="Enter your nationality" [(ngModel)]="createuser.nationality" formControlName="Nationality" />
+                <br/>
+                <div class="error" *ngIf="registerForm.controls['Nationality'].dirty">
+                    <p *ngIf="registerForm.controls['Nationality'].errors?.['required']" class="alert alert-danger">
+                        This Field is Required
+                    </p>
+                </div>
+
+
+                <label for="passportnumber">PASSPORT NUMBER</label>
+                <input class="form-control " type="text" required id="passportnumber" name="passportnumber" placeholder="Enter your passportnumber" [(ngModel)]="createuser.passportnumber" formControlName="Passportnumber" />
+                <br/>
+                <div class="error" *ngIf="registerForm.controls['Passportnumber'].dirty">
+                    <p *ngIf="registerForm.controls['Passportnumber'].errors?.['required']" class="alert alert-danger">
+                        This Field is Required
+                    </p>
+                </div>
+
+
+                <label for="permanentaddress">PERMANENT ADDRESS</label>
+                <input class="form-control " type="text" required id="permanentaddress" name="permanentaddress" placeholder="Enter your permanentaddress" [(ngModel)]="createuser.permanentaddress"   formControlName="Permanentaddress" />
+                <br/>
+                <div class="error" *ngIf="registerForm.controls['Permanentaddress'].dirty">
+                    <p *ngIf="registerForm.controls['Permanentaddress'].errors?.['required']" class="alert alert-danger">
+                        This Field is Required
+                    </p>
+                </div>
+
+
+                <label for="officeaddress">OFFICE ADDRESS</label>
+                <input class="form-control " type="text" required id="officeaddress" name="officeaddress" placeholder="Enter your officeaddress" [(ngModel)]="createuser.officeaddress"   formControlName="Officeaddress" />
+                <br/>
+                <div class="error" *ngIf="registerForm.controls['Officeaddress'].dirty">
+                    <p *ngIf="registerForm.controls['Officeaddress'].errors?.['required']" class="alert alert-danger">
+                        This Field is Required
+                    </p>
+                </div>
+
+
+                <label for="personalidentificationnumber">PERSONAL IDENTIFICATION NUMBER</label>
+                <input class="form-control " type="text" required id="personalidentificationnumber" name="personalidentificationnumber" placeholder="Enter your personalidentificationnumber"   [(ngModel)]="createuser.personalidentificationnumber" formControlName="Personalidentificationnumber" />
+                <br/>
+                <div class="error" *ngIf="registerForm.controls['Personalidentificationnumber'].dirty">
+                    <p *ngIf="registerForm.controls['Personalidentificationnumber'].errors?.['required']" class="alert alert-danger">
+                        This Field is Required
+                    </p>
+                </div>
+
+
+                <button style="color:white" class="btn btn-block   mb-4" type="submit" [disabled]="createuser.firstname?createuser.lastname?createuser.emailid?createuser.mobilenumber?createuser.password?createuser.nationality?createuser.passportnumber?createuser.permanentaddress?createuser.officeaddress?createuser.personalidentificationnumber?false:true:true:true:true:true:true:true:true:true:true"
+                [ngStyle]="{'backgroundColor':createuser.firstname?createuser.lastname?createuser.emailid?createuser.mobilenumber?createuser.password?createuser.nationality?createuser.passportnumber?createuser.permanentaddress?createuser.officeaddress?createuser.personalidentificationnumber?'rgb(0 0 0)':'rgb(0 0 0)':'rgb(0 0 0)':'rgb(0 0 0)':'rgb(0 0 0)':'rgb(0 0 0)':'rgb(0 0 0)':'rgb(0 0 0)':'rgb(0 0 0)':'rgb(0 0 0)':'rgb(0 0 0)'}">Submit</button>
+                <!-- [disabled]="firstname?lastname?emailid?mobilenumber?password?nationality?passportnumber?permanentaddress?officeaddress?personalidentificationnumber?false:true:true:true:true:true:true:true:true:true:true" [ngStyle]="{'backgroundColor':username?password?'rgb(79, 129, 223)':'rgb(205, 224, 242)':'rgb(205, 224, 242)'}" -->
+            </form>
+
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

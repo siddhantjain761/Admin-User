@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <title>Login Template</title>
+  <link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+ <!--  <link rel="stylesheet" href="assets/css/login.css"> -->
+  <link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"><!----pop up font style link---->
+    <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@200&family=Reggae+One&display=swap" rel="stylesheet"><!----pop up font style link end---->
+</head>
+
+<body style="background-color: #8fc4b7">
+  <section    >
+    <div class="container py-5 h-100">
+      <div class="row d-flex justify-content-center align-items-center h-100">
+        <div class="col-lg-8 col-xl-6">
+          <div class="card rounded-3">
+            <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-registration/img3.webp"
+              class="w-100" style="border-top-left-radius: .3rem; border-top-right-radius: .3rem;"
+              alt="Sample photo">
+            <div class="card-body p-4 p-md-5">
+              <h3 class="mb-4 pb-2 pb-md-0 mb-md-5 px-md-2">USER Registration Form</h3>
+
+              <form [formGroup]="update" >
+                <label for=""> Mobile Number : </label>
+                <input class="form-control " required formControlName="Mobilenumber" [(ngModel)]="mobileNumber" type="text">
+                <br>
+                <div class="error" *ngIf="update.controls['Mobilenumber'].dirty">
+                    <p *ngIf="update.controls['Mobilenumber'].errors?.['required']" class="alert alert-danger">
+                        This Field is Required
+                    </p>
+                </div>
+                <br>
+                <label for="">Permanent Address : </label>
+                <input class="form-control " required formControlName="Permanentaddress" [(ngModel)]="permanentAddress" type="text">
+                <br>
+                <div class="error" *ngIf="update.controls['Permanentaddress'].dirty">
+                    <p *ngIf="update.controls['Permanentaddress'].errors?.['required']" class="alert alert-danger">
+                        This Field is Required
+                    </p>
+                </div>
+                <br>
+                <label for="">Office Address : </label>
+                <input required formControlName="Officeaddress" [(ngModel)]="officeAddress" type="text">
+                <br>
+                <div class="error" *ngIf="update.controls['Officeaddress'].dirty">
+                    <p *ngIf="update.controls['Officeaddress'].errors?.['required']">
+                        This Field is Required
+                    </p>
+                </div>
+                <br>
+                <button class="btn btn-info" [disabled]="officeAddress?permanentAddress?mobileNumber?false:true:true:true">Submit</button>
+
+            </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+</body>
+
+</html>

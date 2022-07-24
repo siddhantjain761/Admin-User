@@ -1,0 +1,136 @@
+<!DOCTYPE html>
+<html>
+<head>
+<title>Bootstrap basic table example</title>
+<meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+<link href="https://fonts.googleapis.com/css?family=Karla:400,700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="https://cdn.materialdesignicons.com/4.8.95/css/materialdesignicons.min.css">
+<link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.4.1/css/bootstrap.min.css">
+<!--  <link rel="stylesheet" href="assets/css/login.css"> -->
+<link rel="stylesheet"  href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css"><!----pop up font style link---->
+  <link rel="preconnect" href="https://fonts.gstatic.com">
+<link href="https://fonts.googleapis.com/css2?family=Newsreader:wght@200&family=Reggae+One&display=swap" rel="stylesheet"><!----pop up font style link end---->
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body  style="
+background-image: url('https://mdbootstrap.com/img/Photos/new-templates/craftsman/img(1).jpg');
+height: 100vh;
+    background-size: contain">
+  <header>
+    <!-- Navbar -->
+    <nav class="navbar navbar-expand-lg fixed-top navbar-scroll">
+      <div class="container-fluid">
+         <h3 style="color:white">Transport and Logistics Domain</h3>
+        <button class="navbar-toggler" type="button" data-mdb-toggle="collapse"
+          data-mdb-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false"
+          aria-label="Toggle navigation">
+          <i class="fas fa-bars"></i>
+        </button>
+        <div class="collapse navbar-collapse" id="navbarSupportedContent">
+          <ul class="navbar-nav me-auto">
+
+            <li class="nav-item">
+              <a class="btn nav-link" [routerLink]='[ "/create-workitem"]'> Create Workitem</a>
+            </li>
+            <li class="nav-item">
+              <a class="btn nav-link" [routerLink]='[ "/update-workitem"]'>Update Workitem</a>
+            </li>
+
+          </ul>
+
+        </div>
+      </div>
+    </nav>
+    <!-- Navbar -->
+
+    <!--Section: Design Block-->
+    <section>
+      <div id="intro" class="bg-image" style="
+      background-image: url('https://mdbootstrap.com/img/Photos/new-templates/craftsman/img(1).jpg');
+      height: 1vh;
+    ">
+
+  </div>
+    </section>
+    <!--Section: Design Block-->
+  </header>
+
+   <main>
+     <div class="container my-5 py-5">
+
+      <div class="container"  >
+        <div class="card">
+
+      <table   class="table table-bordered table-striped center ">
+        <thead>
+          <tr>
+              <td>Item Name</td>
+              <td>Item Type</td>
+              <td>Quantity</td>
+              <td>From</td>
+              <td>To</td>
+              <td>Origin Location</td>
+              <td>Selected Location</td>
+              <td>Shipping Date</td>
+              <td>Amount</td>
+              <td>Redirection</td>
+          </tr>
+      </thead>
+      <tbody>
+          <tr>
+              <td>Mobile</td>
+              <td>Electronics</td>
+              <td>5</td>
+              <td>China</td>
+              <td>India</td>
+              <td>Beijing</td>
+              <td>Chennai</td>
+              <td>15 June 2022</td>
+              <td>50000</td>
+              <td><button class="btn btn-info">Update</button></td>
+
+          </tr>
+          <tr>
+              <td>Mobile</td>
+              <td>Electronics</td>
+              <td>5</td>
+              <td>China</td>
+              <td>India</td>
+              <td>Beijing</td>
+              <td>Chennai</td>
+              <td>15 June 2022</td>
+              <td>50000</td>
+              <td><button class="btn btn-info">Update</button></td>
+          </tr>
+          <tr>
+              <td>Mobile</td>
+              <td>Electronics</td>
+              <td>5</td>
+              <td>China</td>
+              <td>India</td>
+              <td>Beijing</td>
+              <td>Chennai</td>
+              <td>15 June 2022</td>
+              <td>50000</td>
+              <td><button class="btn btn-info">Update</button></td>
+          </tr>
+      </table>
+      </div>
+      </div>
+
+
+
+
+
+
+
+
+
+
+
+
+     </div>
+  </main>
+</body>
+</html>
+
