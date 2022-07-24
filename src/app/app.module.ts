@@ -13,6 +13,8 @@ import { UpdateworkitemComponent } from './updateworkitem/updateworkitem.compone
 import { UpdateProfileComponent } from './update-profile/update-profile.component';
 import { ProfileComponent } from './profile/profile.component';
 import { UserWorkitemComponent } from './user-workitem/user-workitem.component';
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
+import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
 
 @NgModule({
   declarations: [
@@ -24,7 +26,9 @@ import { UserWorkitemComponent } from './user-workitem/user-workitem.component';
     UpdateworkitemComponent,
     UpdateProfileComponent,
     ProfileComponent,
-    UserWorkitemComponent
+    UserWorkitemComponent,
+    AdminloginComponent,
+    AdmindashboardComponent,
   ],
   imports: [
     BrowserModule,

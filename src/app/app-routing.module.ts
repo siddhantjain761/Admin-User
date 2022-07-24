@@ -1,3 +1,4 @@
+import { AdminloginComponent } from './adminlogin/adminlogin.component';
 import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { CreateuserComponent } from './createuser/createuser.component';
@@ -8,9 +9,12 @@ import { UpdateProfileComponent } from './update-profile/update-profile.componen
 import { UpdateworkitemComponent } from './updateworkitem/updateworkitem.component';
 import { UserWorkitemComponent } from './user-workitem/user-workitem.component';
 import { UserdashboardComponent } from './userdashboard/userdashboard.component';
+import { AdmindashboardComponent } from './admindashboard/admindashboard.component';
 
 const routes: Routes = [
   {path:'login', component:LoginComponent},
+  {path:'adminlogin', component:AdminloginComponent},
+  {path:'admin-dashboard', component:AdmindashboardComponent},
   {path:"create-user", component: CreateuserComponent},
   {path:"user-dashboard", component: UserdashboardComponent},
   {path:'',redirectTo:'/login',pathMatch:"full"},
